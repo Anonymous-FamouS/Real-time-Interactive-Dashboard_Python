@@ -1,6 +1,158 @@
-# Real-time-Interactive-Dashboard_Python
+
+# 🚌 MBTA GTFS Realtime Dashboard
+
+An interactive dashboard built using Python and Panel to visualise **MBTA (Boston)** realtime GTFS data. This tool animates vehicle movements and maps stop locations for practice in transport data analytics and geospatial visualisation.
 
 https://github.com/user-attachments/assets/2ef813a4-6667-48d7-be34-e89d7d69f594
+
+> ⚠️ **This project is for educational and research purposes only.**
+
+## 🚀 Features
+
+- 🛰️ **Realtime animated vehicle tracking**
+- 🔘 **Toggle visibility** for stops and vehicles
+- 🌑 **Dark theme** for better visual clarity
+- 🧭 **Map navigation controls** (zoom, pan, reset)
+- 📊 **Live metrics**: vehicle count, average speed, and movement animation
+
+## 📦 Requirements
+
+- Python 3.12.4
+- Panel 
+- Holoviews
+- Bokeh
+- Pandas
+- NumPy
+- Geopandas (optional)
+
+🗂️ Data Source and License
+All transit data used in this project is freely provided by the Massachusetts Bay Transportation Authority (MBTA).
+
+## 📄 Input Files
+
+- **stops.txt**: From MBTA’s [GTFS Static Data](https://cdn.mbta.com/MBTA_GTFS.zip)
+- **mbta_gtfs_rt.csv**: A CSV sample derived from MBTA’s GTFS-RT feed using a custom script
+
+Required CSV columns:
+- `vehicle_id`, `route_id`, `latitude`, `longitude`, `timestamp`
+
+## ▶️ Running the Dashboard
+Aftrer saving the file (e.g., dashboard.py),cd command should be used in the terminal to navigate to the dircertory of the saved file and then run it.  
+
+
+```bash
+cd "/Users/*/*/MBTA" 
+panel serve dashboard.py --show
+```
+
+📸 Preview
+(You can insert a GIF or screenshot here later)
+🗂️ Data Source and License
+All transit data used in this project is freely provided by the Massachusetts Bay Transportation Authority (MBTA).
+📁 GTFS Static: https://cdn.mbta.com/MBTA_GTFS.zip
+📡 GTFS Realtime: https://api.mbta.com/realtime
+📚 Docs: https://www.mbta.com/developers
+⚖️ Licensed for public, non-commercial, and educational use. Always credit MBTA as the source of data.
+🧑‍💻 Author
+Developed by [Your Name] for skill-building in Python, transport analytics, and dashboard development.
+
+---
+
+Let me know if you want me to include a citation section, bibliography style, or add a direct link to the raw CSV you used.
+
+
+
+# 🚍 MBTA Real-Time Transit Dashboard
+
+A dynamic, animated dashboard visualizing real-time vehicle locations from the MBTA (Massachusetts Bay Transportation Authority) GTFS-RT feed using Python and Panel.
+
+This project was built purely for **educational and practice purposes**, with a strong emphasis on **real-time data streaming**, **map-based animation**, and **dashboard design**.
+
+## 🔍 Features
+
+- Animated real-time tracking of MBTA vehicles
+- Toggle visibility of:
+  - Stops
+  - Live vehicles
+  - Animated vehicle traces
+- Custom legend for clear data interpretation
+- Panel-based dashboard UI with dark theme
+- Enhanced map controls: zoom, pan, and reset view
+
+## 🗂️ Contents
+
+- `gtfs_animated_dashboard.py`: Main dashboard application
+- `README.md`: Project overview (this file)
+- Optional development snapshots (GIFs/videos in stages)
+
+## 📽️ Demo (Final Output)
+
+<!-- You can embed your screen recording or host it on YouTube and link here -->
+![Final Dashboard Animation](./media/final_demo.gif)
+
+## 🧱 Development Stages
+
+| Stage | Description | Preview |
+|-------|-------------|---------|
+| 1 | Static GTFS stop and vehicle map | ![Stage 1](./media/stage1.gif) |
+| 2 | Filter controls for toggling elements | ![Stage 2](./media/stage2.gif) |
+| 3 | Animated vehicle traces | ![Stage 3](./media/stage3.gif) |
+| 4 | Full Panel dashboard integration + interactivity | ![Stage 4](./media/stage4.gif) |
+
+## 🔧 Tech Stack & Tools
+
+- **Python**
+  - `panel`
+  - `holoviews` (with `bokeh`)
+  - `geopandas`
+  - `requests`
+  - `pandas`
+  - `pyproj`
+- **GTFS-RT Protocol Buffers**: for parsing real-time MBTA vehicle positions
+- **Map Tiles**: `CartoDark` background via Panel’s `tiles="CartoDark"` setting
+- **Terminal Execution**: Use `panel serve` to run the dashboard
+
+## 🚀 How to Run
+
+1. Clone the repository.
+2. Make sure you have Python ≥ 3.8.
+3. Install dependencies:
+
+```bash
+pip install panel geopandas requests protobuf pandas pyproj
+```
+
+Launch the dashboard:
+panel serve gtfs_animated_dashboard.py --autoreload --show
+📡 Data Source
+Real-Time Vehicle Positions:
+MBTA GTFS-RT feed (vehicles)
+Static GTFS Data:
+MBTA static GTFS
+All data is provided freely and publicly by the MBTA under open-access terms. Please refer to MBTA’s Developers Page for detailed terms of use.
+💡 Educational Purpose
+This project is not affiliated with or endorsed by MBTA. It is developed solely for:
+Practicing real-time data handling
+Experimenting with geographic visualization
+Learning Panel/holoviews-based dashboards
+📌 Possible Extensions
+Route path animations using shape files
+Delay estimation or travel-time heatmaps
+Playback controls (pause/resume timeline)
+Historical GTFS-RT visual replay
+
+
+
+
+
+
+
+
+
+
+# Real-time-Interactive-Dashboard_Python
+
+
 
 https://github.com/user-attachments/assets/901f4b72-1c4c-4234-a138-3b7cb7b7b1fc
 
